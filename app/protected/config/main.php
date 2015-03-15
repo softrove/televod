@@ -34,6 +34,11 @@ return array(
 		*/
 	),
 
+    'commandMap' => array(
+        'class' => 'system.cli.commands.MigrateCommand',
+        'migrationTable'=>'{{migration}}',
+    ),
+
 	// application components
 	'components'=>array(
 
