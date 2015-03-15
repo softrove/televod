@@ -1,0 +1,13 @@
+{
+  "require": {
+    "yiisoft/yii": "1.1.16"
+  },
+  "config": {
+    "vendor-dir": "app/protected/vendor/"
+  },
+  "autoload":{
+    "psr-0":{
+      "config":"app/protected/"
+    }
+  }
+}
