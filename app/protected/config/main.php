@@ -5,6 +5,9 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+
+echo Yii::getPathOfAlias('RestfullYii.config.routes');
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
@@ -41,7 +44,7 @@ return array(
 
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-			'rules'=>array(
+			'rules'=>require(
                 dirname(__FILE__).'/../vendor/starship/restfullyii/starship/RestfullYii/config/routes.php'
 			),
 		),
@@ -49,10 +52,10 @@ return array(
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
 
-		'errorHandler'=>array(
-			// use 'site/error' action to display errors
-			'errorAction'=>'site/error',
-		),
+//		'errorHandler'=>array(
+//			// use 'site/error' action to display errors
+//			'errorAction'=>'site/error',
+//		),
 
 		'log'=>array(
 			'class'=>'CLogRouter',
