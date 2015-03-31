@@ -1,0 +1,8 @@
+class_name: ApiTester
+modules:
+    enabled: [PhpBrowser, REST, ApiHelper]
+    config:
+        PhpBrowser:
+            url: http://local1.dev:8010/
+        REST:
+            url: http://local1.dev:8010/api/
