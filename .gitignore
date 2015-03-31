@@ -2,3 +2,4 @@
 app/protected/runtime
 app/protected/vendor
 composer.lock
+tests/_output/*

@@ -38,4 +38,12 @@ class SeriesController extends CController
             ),
         );
     }
+
+    public function restEvents()
+    {
+        $this->onRest('post.filter.req.auth.ajax.user',
+            function(){
+                return true;
+            });
+    }
 }

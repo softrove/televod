@@ -2,7 +2,8 @@
   "require": {
     "yiisoft/yii": "1.1.16",
     "starship/restfullyii": "dev-master",
-    "yiiext/migrate-command": "0.8.0"
+    "yiiext/migrate-command": "0.8.0",
+    "codeception/codeception": "~2.0"
   },
   "config": {
     "vendor-dir": "app/protected/vendor/"
