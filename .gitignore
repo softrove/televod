@@ -1,5 +1,6 @@
-.idea
-app/protected/runtime
-app/protected/vendor
-composer.lock
-tests/_output/*
+/.idea
+/app/protected/runtime
+/app/protected/vendor
+/composer.lock
+/tests/_output
+/app/assets
