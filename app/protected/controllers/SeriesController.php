@@ -45,5 +45,27 @@ class SeriesController extends CController
             function(){
                 return true;
             });
+
+        $this->onRest('req.cors.access.control.allow.origin', function() {
+            if($key = Yii::app()->getRequest()->getParam('key')) {
+                $origins = Origin::model()->findAll(array(
+                    'with' => array('key_search' =>
+                        array(
+                            'select' => false,
+                            'together' => true,
+                        )
+                    )
+                ));
+
+                return array_map(function($origin){
+                    return $origin->url;
+                }, $origins);
+            }
+            return array();
+        });
+
+        $this->onRest('req.cors.access.control.allow.methods', function() {
+            return ['GET', 'POST', 'PUT', 'DELETE','OPTIONS'];
+        });
     }
 }

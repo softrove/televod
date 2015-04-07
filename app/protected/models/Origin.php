@@ -47,6 +47,7 @@ class Origin extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'key' => array(self::BELONGS_TO, 'ApiKey', 'key_id'),
+            'key_search' => array(self::BELONGS_TO, 'ApiKey', 'key_id'),
 		);
 	}
 
